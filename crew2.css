@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+}
+:root{
+    --font-family1:'Barlow Condensed', sans-serif;
+    --font-family2: 'Bellefair', serif;
+    --font-family3:'Barlow', sans-serif;
+    --white:white;
+    --black:#000;
+}
+.navcontainer{
+    width: 100%;
+    
+}
+.logo{
+    margin: 24px 56px;
+        order: -1;
+}
+body {
+    overflow: hidden;
+    background-image: url(img/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:32px 0;
+}
+.navbar::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1.6px;
+    background-color: var(--white);
+    opacity: .2;
+    left: 20px;
+    z-index: 1;
+}
+
+.navlinks li{
+    list-style-type: none;
+    position: relative;
+}
+
+.navlinks li a {
+    color: var(--white);
+    font-family:  var(--font-family1);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 34px 0;
+    font-size: 18.2px;
+    letter-spacing: 3px;
+}
+
+.navlinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 36px 100px;
+    backdrop-filter: blur(35px);
+    background-color: #ffffff13;
+}
+
+.navlinks li a:hover{
+    border-bottom: 3px solid rgba(255, 255, 255, 0.452);
+}
+.active{
+    border-bottom: 3px solid var(--white);
+}
+.head h1{
+    width: 100%;
+    font-size: 1.75rem;
+    font-family:var(--font-family1);
+    color: var(--white);
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+.head span{
+    font-weight: bolder;
+    font-size: 1.75rem;
+    color: wheat;
+    opacity: .3;
+    font-family: var(--font-family1);
+    margin-right: 0.5em;
+ }
+ .com{
+    gap: 12pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6%;
+}
+.com h2{
+font-family:var(--font-family2);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: .5;
+    line-height: 1.1;
+}
+.com span{
+    font-family:var(--font-family2);
+    font-size: 3.5rem;
+    color: var(--white);
+}
+.com p {
+    line-height: 1.5;
+    max-width: 60%;
+    font-family:var(--font-family3);
+    font-size: 1.1rem;
+    color: var(--white);
+}
+.btn > .active {
+    background-color: var(--white);
+    opacity: 1;
+}
+.btn{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 9%;
+}
+
+.btn a {
+    width: 18px;
+    height: 18px;
+    background-color: var(--white);
+    opacity: 0.25;
+    border-radius: 50%;
+    margin: 10px;
+}
+.crew-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.crew-container {
+    margin-left: 12%;
+}
+.image {
+    position: relative;
+    bottom: 4rem;
+}
+#checkbox{
+    width: 100px;
+    height: 80px;
+    font-size: 2rem;
+    color: hsl(var(--clr-white));
+    position: absolute;
+    left: 89%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ 
+ }
+ #menu-bar{
+    display: none;
+ }
+
+
+@media (max-width:768px){
+    body{
+        background-image: url(img/background-crew-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: auto;
+        overflow: scroll;
+    }
+    .logo {
+        position: absolute;
+        margin: 35px 25px;
+        top: 0;
+    }
+    .navbar {
+        margin: 0;
+    }
+    .navlinks {
+        display: flex;
+        gap: 30px;
+        padding: 11px 8%;
+        backdrop-filter: blur(35px);
+        background-color: #ffffff13;
+        right: 0px;
+        top: 1.5rem;
+        position: absolute;
+        z-index: 10;
+    }
+    .navbar::before{
+        display: none;
+    }
+    .navlinks li a {
+        font-size: 12px;
+        display: block;
+        padding: 14px 0;
+    }
+.crew-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.image{
+    position: static;
+}
+}
+
+@media (max-width:560px){
+    body{
+        background-image: url(img/background-crew-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: auto;
+        overflow: scroll;
+    }
+    .logo {
+        margin: 20px;
+    }
+    .navbar {
+        position: relative;
+        margin-top: 0px;
+        height: 100%;
+    }
+    .navlinks{
+        display: none;
+        left: 0;
+    }
+    .image {
+        position: relative;
+        bottom: 72%;
+        width: 100%;
+    }
+    .image img {
+        width: 60%;
+        margin-left: 5rem;
+    }
+    .com {
+        position: relative;
+        top: 148%;
+        text-align: center;
+    }
+    .btn {
+        position: relative;
+        top: 50%;
+        left: 14%;
+        width: 79%;
+    }
+    .com h2{
+        font-size: 1.5rem;
+        margin-right: 5rem;
+    }
+    .com span{
+        font-size: 2rem;
+        margin-right: 5rem;
+    }
+    .com p{
+        max-width: 83%;
+    }
+    .head h1{
+        width: 100%;
+    }
+    .navlinks{
+        display: none;
+      }
+      .navlinks li {
+        list-style-type: none;
+        position: relative;
+        margin: 32px 18px;
+    }
+    i.fa-solid.fa-bars {
+        position: fixed;
+        right: 0;
+        left: 22.5rem;
+    }
+    #checkbox:hover{
+        cursor: pointer;
+    }
+    #checkbox {
+        font-size: 2.50rem;
+        color: var(--white);
+        justify-content: flex-end;
+        align-items: center;
+        display: block;
+        width: 100vw;
+        position: relative;
+        left: -43px;
+        display: flex;
+        z-index: 2;
+    }
+    #menu-bar:checked ~ .navlinks {
+        display: block;
+        z-index: 1;
+        margin-top: -5%;
+        margin-left: 15rem;
+    }
+    .navlinks li a.active2 {
+        margin-top: 5rem;
+    }
+    #cl{
+        display: none;
+    }
+    #menu-bar:checked~ label #fb{
+        display: none;
+  }
+  #menu-bar:checked~ label #cl{
+   display: block;
+}
+    .active{
+        border-bottom: none;
+    }
+    
+}

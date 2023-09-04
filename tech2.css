@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+}
+:root{
+    --font-family1:'Barlow Condensed', sans-serif;
+    --font-family2: 'Bellefair', serif;
+    --font-family3:'Barlow', sans-serif;
+    --white:white;
+    --black:#000;
+}
+.navcontainer{
+    width: 100%;
+    
+}
+.logo{
+    margin: 24px 56px;
+        order: -1;
+}
+body {
+    overflow: hidden;
+    background-image: url(img/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:32px 0;
+}
+.navbar::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1.6px;
+    background-color: var(--white);
+    opacity: .2;
+    left: 20px;
+    z-index: 1;
+}
+
+.navlinks li{
+    list-style-type: none;
+    position: relative;
+}
+
+.navlinks li a {
+    color: var(--white);
+    font-family: var(--font-family1);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 34px 0;
+    font-size: 18.2px;
+    letter-spacing: 3px;
+}
+
+.navlinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 36px 100px;
+    backdrop-filter: blur(35px);
+    background-color: #ffffff13;
+}
+
+.navlinks li a:hover{
+    border-bottom: 3px solid rgba(255, 255, 255, 0.452);
+}
+.active{
+    border-bottom: 3px solid var(--white);
+}
+
+.head h1{
+    width: 100%;
+    font-size: 1.75rem;
+    font-family:var(--font-family1);
+    color: var(--white);
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+.head span{
+    font-weight: bolder;
+    font-size: 1.75rem;
+    color: wheat;
+    opacity: .3;
+    font-family: var(--font-family1);
+    margin-right: 0.5em;
+ }
+
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 6rem;
+    margin-top: 6%;
+    width: 33%;
+}
+.btn a{ 
+    font-size: 24px;
+    font-family: var(--font-family1);
+    text-decoration: none;
+    width: 76px;
+    padding: 20px;
+    color: var(--white);
+    text-align: center;
+    border-left: 2px solid gray;
+    border-top: 2px solid grey;
+    border-radius: 50%;
+}
+.btn a:hover{
+    background-color: rgb(109, 109, 109);
+}
+.btn > .active1{
+    background-color: var(--white);
+    color: #000;
+    border: none;
+}
+.btn > .active1:hover{
+    background-color: var(--white);
+}
+.tech-cnt1 {
+    margin-right: 1rem;
+}
+.tech-cnt h2{
+    font-family: var(--font-family3);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--white);
+    opacity: .4;
+    margin: 10px 0;
+}
+.tech-cnt span{
+    font-size: 3.5rem;
+    color: var(--white);
+    font-family: var(--font-family2);
+}
+.tech-cnt p {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-family: var(--font-family3);
+    line-height: 1.5;
+    margin: 10px 0;
+    margin-right: 8rem;
+}
+.cnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.head {
+    margin-left: 6%;
+    margin-top: 4%;
+}
+.tech-cnt{
+    
+    margin-top: 10rem;
+    margin-right: 26rem;
+    width: 99%;
+}
+
+.image {
+    width: 88%;
+    margin-right: 4rem;
+    position: relative;
+    bottom: 4rem;
+}
+img.landscape {
+    display: none;
+}
+
+#checkbox{
+    width: 100px;
+    height: 80px;
+    font-size: 2rem;
+    color: hsl(var(--clr-white));
+    position: absolute;
+    left: 89%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ 
+ }
+ #menu-bar{
+    display: none;
+ }
+
+@media (max-width:768px){
+    body{
+        background-image: url(img/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: auto;
+        overflow: scroll;
+    }
+    .logo {
+        position: absolute;
+        margin: 35px 25px;
+        top: 0;
+    }
+    .navbar {
+        margin: 0;
+    }
+    .navlinks {
+        display: flex;
+        gap: 30px;
+        padding: 11px 8%;
+        backdrop-filter: blur(35px);
+        background-color: #ffffff13;
+        right: 0px;
+        top: 1.5rem;
+        position: absolute;
+        z-index: 10;
+    }
+    .navbar::before{
+        display: none;
+    }
+    .navlinks li a {
+        font-size: 12px;
+        display: block;
+        padding: 14px 0;
+    }
+
+.image{
+    display: none;
+}
+
+.cnt {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    margin-left: 17rem;
+    margin-top: 10%;
+    width: 39%;
+}
+.btn a {
+    font-size: 18px;
+    font-family: var(--font-family1);
+    text-decoration: none;
+    width: 76px;
+    padding: 14px;
+    color: var(--white);
+    text-align: center;
+    border: 2px solid rgb(109, 109, 109);
+    border-radius: 50%;
+    margin: 0 6px;
+}
+img.landscape{
+    width: 100%;
+    display: block;
+}
+.image{
+    display: none;
+}
+.head h1{
+    width: 100%;
+}
+.tech-cnt span {
+    font-size: 2rem;
+}
+.tech-cnt p {
+    text-align: center;
+    margin-right: 0;
+}
+.tech-cnt1 {
+    margin-right: 0;
+    margin-bottom: 9rem;
+    margin-left: 4rem;
+}
+.tech-cnt {
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 20rem;
+    width: 96%;
+}
+.head {
+    margin-top: 0%;
+    margin-bottom: 3%;
+}
+}
+
+@media (max-width:560px){
+    body{
+        background-image: url(img/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: auto;
+        overflow: scroll;
+    }
+    .logo {
+        margin: 20px;
+    }
+    .navbar {
+        position: relative;
+        margin-top: 0px;
+        height: 100%;
+    }
+    .navlinks{
+        display: none;
+    }
+   
+    .head h1{
+        width: 100%;
+    }
+    .navlinks{
+        display: none;
+        left: 0;
+      }
+      .navlinks li {
+        list-style-type: none;
+        position: relative;
+        margin: 32px 18px;
+    }
+    i.fa-solid.fa-bars {
+        position: fixed;
+        right: 0;
+        left: 22.5rem;
+    }
+    #checkbox:hover{
+        cursor: pointer;
+    }
+    #checkbox {
+        font-size: 2.50rem;
+        color: var(--white);
+        justify-content: flex-end;
+        align-items: center;
+        display: block;
+        width: 100vw;
+        position: relative;
+        left: -43px;
+        display: flex;
+        z-index: 2;
+    }
+    #menu-bar:checked ~ .navlinks {
+        display: block;
+        z-index: 1;
+        margin-top: -5%;
+        margin-left: 15rem;
+    }
+    .navlinks li a.active2 {
+        margin-top: 5rem;
+    }
+    #cl{
+        display: none;
+    }
+    #menu-bar:checked~ label #fb{
+        display: none;
+  }
+  #menu-bar:checked~ label #cl{
+   display: block;
+}
+    .active{
+        border-bottom: none;
+    }
+    .btn {
+        margin-left: 12rem;
+    }
+    .tech-cnt {
+        text-align: center;
+        margin-top: 2rem;
+        margin-right: 20rem;
+        width: 68%;
+    }
+    .tech-cnt1 {
+        width: 114%;
+    }
+    img.landscape{
+        width: 100%;
+        display: block;
+    }
+    
+}
